@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
+//render( what I want to  render(request),  where I wnat to render it )
+// html in javascript is called JSX
+// this JSX is supposed to be put in <div id='root></div>
 ReactDOM.render(
-  <React.StrictMode>
+  //if any bugs appear, try React.strictmode
+  //I quit strictmode because it calls functions twice and it is annoying
+  <React.Suspense>
     <App />
-  </React.StrictMode>,
+  </React.Suspense>,
   document.getElementById('root')
 );
 
